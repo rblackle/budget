@@ -1,4 +1,4 @@
-package com.tmp;
+package com.fifty.thirty.twenty;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/api/greetings")
 public class GreeterController {
     
-    private static final String template = "Hello, %s!";
+    private static final String template = "Hello123, %s!";
 
     @RequestMapping(method = RequestMethod.GET, produces = { "application/json" })
     public @ResponseBody Greeting greetNoName() {

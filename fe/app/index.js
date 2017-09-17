@@ -1,9 +1,9 @@
 var greeter = require('./greeter');
 
-var greeting = greeter.greet();
+var greeting = greeter.greet("1");
 
 if (typeof document !== 'undefined') {
-  var apiEndpoint = 'http://localhost:8090/api/greetings';
+  var apiEndpoint = 'http://localhost:8888/api/greetings';
   var el = document.createElement('h1');
 
   fetch(apiEndpoint + '/webpack').then(function(response) {
