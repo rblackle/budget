@@ -8,7 +8,16 @@ const PATHS = {
 
 module.exports = {
   entry: './app/index.js',
-
+  module: {
+    loaders: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'react-hot-loader!babel-loader'
+    }]
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
   output: {
     path: PATHS.build,
     publicPath: '/assets/',
