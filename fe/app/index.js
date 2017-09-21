@@ -1,6 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var greeter = require('./greeter');
 
-var greeting = greeter.greet("1");
+var greeting = greeter.greet();
 
 if (typeof document !== 'undefined') {
   var apiEndpoint = 'http://localhost:8888/api/greetings';
@@ -18,4 +21,18 @@ if (typeof document !== 'undefined') {
 } else {
   console.log(greeting);
 }
+
+ReactDOM.render(
+<div className="container">
+  <form className="form-signin">
+  <h2 className="form-signin-heading">Please sign in</h2>
+<label htmlFor="inputEmail" className="sr-only">Email address</label>
+<input type="email" id="inputEmail" className="form-control" placeholder="Email address" required="" autoFocus=""/>
+  <label htmlFor="inputPassword" className="sr-only">Password</label>
+  <input type="password" id="inputPassword" className="form-control" placeholder="Password" required=""/>
+  <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  </form>
+  </div>,
+  document.getElementById("app")
+);
 
