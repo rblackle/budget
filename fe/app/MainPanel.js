@@ -9,9 +9,10 @@ export default class MainPanel extends React.Component {
   render() {
 
     let mainPanelStyle = {
-      marginLeft: '300px',
+      marginLeft: '200px',
       minWidth: '550px',
-      maxWidth: '1150px'
+      maxWidth: '1150px',
+      padding: '10px'
     };
 
     return (
