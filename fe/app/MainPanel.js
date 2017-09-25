@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import {Route, Switch} from "react-router-dom";
 import DashboardPanel from "./DashboardPanel";
 import TransactionsPanel from "./TransactionsPanel";
+import PageShell from "./PageShell";
 
 export default class MainPanel extends React.Component {
 
@@ -18,9 +19,9 @@ export default class MainPanel extends React.Component {
     return (
       <div className='main-panel' style={mainPanelStyle}>
         <Switch>
-          <Route exact path='/' component={DashboardPanel}/>
-          <Route path='/dashboard' component={DashboardPanel}/>
-          <Route path='/transactions' component={TransactionsPanel}/>
+          <Route exact path='/' component={PageShell(DashboardPanel)}/>
+          <Route path='/dashboard' component={PageShell(DashboardPanel)}/>
+          <Route path='/transactions' component={PageShell(TransactionsPanel)}/>
         </Switch>
       </div>
     );
