@@ -1,4 +1,5 @@
 import React from "react";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class BudgetProgressIndicator extends React.Component {
 
@@ -60,17 +61,21 @@ export default class BudgetProgressIndicator extends React.Component {
       zIndex: '-1'
     };
 
-    console.log("renderings");
     return (
       <div className='budget-progress-indicator' style={budgetProcessIndicatorStyle}>
         <div className='budget-name' style={budgetNameStyle}>{this.props.name}</div>
         <div className='progress-wrapper' style={progressWrapperStyle}>
           <div className="progress" style={progressStyle}>
-            <div key="blah" className="progress-bar" role="progressbar" style={progressBarStyle}
+            <ReactCSSTransitionGroup
+              transitionAppear={true}
+              transitionAppearTimeout={200}
+              transitionName="growBar">
+            <div key={this.props.name} className="progress-bar" role="progressbar" style={progressBarStyle}
                   onMouseOver={this.mouseIn.bind(this)}
                   onMouseOut={this.mouseOut.bind(this)}>
               <span className="curAmount" style={curAmountStyle}>${this.props.used}</span>
             </div>
+            </ReactCSSTransitionGroup>
           </div>
           <div className="totalAmount" style={totalAmountStyle}>${this.props.total}</div>
         </div>
