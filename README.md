@@ -14,3 +14,5 @@ and still hitting http://localhost:8888 (but with a live node server)
 
 
 See http://justincalleja.com/2016/04/17/serving-a-webpack-bundle-in-spring-boot/
+npm i html-webpack-plugin --save-dev
+npm i style-loader css-loader --save-dev
