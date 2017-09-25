@@ -6,6 +6,8 @@ export default class SidePanel extends React.Component {
 
   render() {
 
+    require("./css/style.css");
+
     let sidePanelStyle = {
       position: 'fixed',
       display: 'flex',
