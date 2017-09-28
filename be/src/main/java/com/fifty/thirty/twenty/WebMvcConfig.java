@@ -34,8 +34,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         super.addResourceHandlers(registry);
         registry.addResourceHandler("/**")
             .addResourceLocations("classpath:/META-INF/resources/webjars/fe/" + buildVersion + "/");
-        registry.addResourceHandler("/assets/**")
-            .addResourceLocations("classpath:/META-INF/resources/webjars/fe/" + buildVersion + "/");
     }
     
     @Override
