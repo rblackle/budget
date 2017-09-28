@@ -47,6 +47,9 @@ h1 {
     transition: all 200ms linear;
 }
 
+/**
+ ************************************************************************
+ * The enter/leave hooks are not actually being used, but it is a good example so I am going to leave them for reference.
 .slideIn-enter {
     opacity: 0;
     transform: translateX(30px);
@@ -70,6 +73,9 @@ h1 {
     transform: translateX(-30px);
     transition: all 200ms linear;
 }
+
+ ************************************************************************
+ */
 
 .progress-bar.growBar-appear  {
     width: 0 !important;

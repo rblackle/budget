@@ -30,7 +30,7 @@ module.exports = {
   },
   output: {
     path: PATHS.build,
-    publicPath: '/assets/',
+    publicPath: '/',
     filename: 'app-bundle.js'
   },
   plugins: [
